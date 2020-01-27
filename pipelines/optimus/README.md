@@ -11,6 +11,7 @@
   * [Inputs](#inputs)
     + [Sample Data Input](#sample-data-input)
     + [Additional Reference Inputs](#additional-reference-inputs)
+    + [Sample Inputs for Analyses in a Terra Workspace](#sample-inputs-for-analyses-in-a-terra-workspace)
 - [Running Optimus](#running-optimus)
   * [Optimus Task Summary](#optimus-task-summary)
     + [1. Converting R2 Fastq File to UBAM](#1-converting-r2-fastq-file-to-ubam)
@@ -83,7 +84,7 @@ The json file also contains metadata for the following reference information:
  * Counting_mode: an optional string description of whether the input is single-cell or single-nuclei data
   * String options: "sc_rna" or "sn_rna".
   
-### Sample inputs for analyses in a Terra workspace
+### Sample Inputs for Analyses in a Terra Workspace
 
 The Optimus pipeline is currently available on the cloud-based platform Terra. If you have a Terra account, you can access the Featured Workspace using this address: [https://app.terra.bio/#workspaces/featured-workspaces-hca/HCA_Optimus_Pipeline](https://app.terra.bio/#workspaces/featured-workspaces-hca/HCA_Optimus_Pipeline). The workspace is preloaded with instructions and sample data. For more information on using the Terra platform, please view the [Support Center](https://support.terra.bio/hc/en-us).  
 
