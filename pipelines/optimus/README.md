@@ -12,7 +12,7 @@
     + [Sample Data Input](#sample-data-input)
     + [Additional Reference Inputs](#additional-reference-inputs)
 - [Running Optimus](#running-optimus)
-  * [Optimus Modules Summary](#optimus-modules-summary)
+  * [Optimus Task Summary](#optimus-task-summary)
     + [1. Converting R2 Fastq File to UBAM](#1-converting-r2-fastq-file-to-ubam)
     + [2. Correcting and Attaching Cell Barcodes](#2-correcting-and-attaching-cell-barcodes)
     + [3. Alignment](#3-alignment)
