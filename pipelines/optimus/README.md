@@ -85,7 +85,7 @@ The json file also contains metadata for the following reference information:
   
 ### Sample inputs for analyses in a Terra workspace
 
-The Optimus pipeline is currently available on the cloud-based platform Terra. If you have a Terra account, you can access the Featured Workspace using this address: [](https://app.terra.bio/#workspaces/featured-workspaces-hca/HCA_Optimus_Pipeline). The workspace is preloaded with instructions and sample data. For more information on using the Terra platform, please view the [Support Center](https://support.terra.bio/hc/en-us).  
+The Optimus pipeline is currently available on the cloud-based platform Terra. If you have a Terra account, you can access the Featured Workspace using this address: [https://app.terra.bio/#workspaces/featured-workspaces-hca/HCA_Optimus_Pipeline](https://app.terra.bio/#workspaces/featured-workspaces-hca/HCA_Optimus_Pipeline). The workspace is preloaded with instructions and sample data. For more information on using the Terra platform, please view the [Support Center](https://support.terra.bio/hc/en-us).  
 
 # Running Optimus
 
