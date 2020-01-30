@@ -82,7 +82,7 @@ The json file also contains metadata for the following reference information:
   * String options: "tenX_v2" (default) or "tenX_v3"
    * Note: Optimus validates this string. If the string does not match these options, the pipeline will fail. You can remove the checks by setting "force_no_check = true" in the input json.
  * Counting_mode: an optional string description of whether the input is single-cell or single-nuclei data
-  * String options: "sc_rna" or "sn_rna".
+   * String options: "sc_rna" or "sn_rna".
   
 ### Sample Inputs for Analyses in a Terra Workspace
 
