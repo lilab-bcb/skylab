@@ -1,21 +1,38 @@
 version 1.0
 
-import "../../library/tasks/FastqToUBam.wdl" as FastqToUBam
-import "../../library/tasks/Attach10xBarcodes.wdl" as Attach
-import "../../library/tasks/SplitBamByCellBarcode.wdl" as Split
-import "../../library/tasks/MergeSortBam.wdl" as Merge
-import "../../library/tasks/CreateCountMatrix.wdl" as Count
-import "../../library/tasks/StarAlignBamSingleEnd.wdl" as StarAlignBam
-import "../../library/tasks/TagGeneExon.wdl" as TagGeneExon
-import "../../library/tasks/SequenceDataWithMoleculeTagMetrics.wdl" as Metrics
-import "../../library/tasks/TagSortBam.wdl" as TagSortBam
-import "../../library/tasks/RunEmptyDrops.wdl" as RunEmptyDrops
-import "../../library/tasks/ZarrUtils.wdl" as ZarrUtils
-import "../../library/tasks/Picard.wdl" as Picard
-import "../../library/tasks/UmiCorrection.wdl" as UmiCorrection
-import "../../library/tasks/ScatterBam.wdl" as ScatterBam
-import "../../library/tasks/ModifyGtf.wdl" as ModifyGtf
-import "../../library/tasks/OptimusInputChecks.wdl" as OptimusInputChecks
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/FastqToUBam.wdl" as FastqToUBam
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/Attach10xBarcodes.wdl" as Attach
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/SplitBamByCellBarcode.wdl" as Split
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/MergeSortBam.wdl" as Merge
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/CreateCountMatrix.wdl" as Count
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/StarAlignBamSingleEnd.wdl" as StarAlignBam
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/TagGeneExon.wdl" as TagGeneExon
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/SequenceDataWithMoleculeTagMetrics.wdl" as Metrics
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/TagSortBam.wdl" as TagSortBam
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/RunEmptyDrops.wdl" as RunEmptyDrops
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/ZarrUtils.wdl" as ZarrUtils
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/Picard.wdl" as Picard
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/UmiCorrection.wdl" as UmiCorrection
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/ScatterBam.wdl" as ScatterBam
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/ModifyGtf.wdl" as ModifyGtf
+import "https://raw.githubusercontent.com/lilab-bcb/skylab/master/library/tasks/OptimusInputChecks.wdl" as OptimusInputChecks
+
+#import "../../library/tasks/FastqToUBam.wdl" as FastqToUBam
+#import "../../library/tasks/Attach10xBarcodes.wdl" as Attach
+#import "../../library/tasks/SplitBamByCellBarcode.wdl" as Split
+#import "../../library/tasks/MergeSortBam.wdl" as Merge
+#import "../../library/tasks/CreateCountMatrix.wdl" as Count
+#import "../../library/tasks/StarAlignBamSingleEnd.wdl" as StarAlignBam
+#import "../../library/tasks/TagGeneExon.wdl" as TagGeneExon
+#import "../../library/tasks/SequenceDataWithMoleculeTagMetrics.wdl" as Metrics
+#import "../../library/tasks/TagSortBam.wdl" as TagSortBam
+#import "../../library/tasks/RunEmptyDrops.wdl" as RunEmptyDrops
+#import "../../library/tasks/ZarrUtils.wdl" as ZarrUtils
+#import "../../library/tasks/Picard.wdl" as Picard
+#import "../../library/tasks/UmiCorrection.wdl" as UmiCorrection
+#import "../../library/tasks/ScatterBam.wdl" as ScatterBam
+#import "../../library/tasks/ModifyGtf.wdl" as ModifyGtf
+#import "../../library/tasks/OptimusInputChecks.wdl" as OptimusInputChecks
 
 workflow Optimus {
   meta {
