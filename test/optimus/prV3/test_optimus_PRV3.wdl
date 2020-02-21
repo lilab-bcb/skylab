@@ -1,6 +1,6 @@
 version 1.0
 
-import "../../../pipelines/optimus/Optimus.wdl" as target
+import "Optimus.wdl" as target
 import "ValidateOptimus.wdl" as checker
 
 
@@ -43,7 +43,8 @@ workflow TestOptimusPR {
       sample_id = sample_id,
       output_loom = true,
       chemistry = chemistry,
-      force_no_check = force_no_check
+      force_no_check = force_no_check,
+      emptydrops_lower = 1
   }
 
   call checker.ValidateOptimus as checker {

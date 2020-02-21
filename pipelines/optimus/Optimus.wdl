@@ -34,11 +34,12 @@ import "https://raw.githubusercontent.com/lilab-bcb/skylab/cumulus/library/tasks
 #import "../../library/tasks/ModifyGtf.wdl" as ModifyGtf
 #import "../../library/tasks/OptimusInputChecks.wdl" as OptimusInputChecks
 
+
 workflow Optimus {
   meta {
     description: "The optimus 3' pipeline processes 10x genomics sequencing data based on the v2 chemistry. It corrects cell barcodes and UMIs, aligns reads, marks duplicates, and returns data as alignments in BAM format and as counts in sparse matrix exchange format."
   }
-
+  
   input {
     # version of this pipeline
     String version = "optimus_v1.4.0"
@@ -61,12 +62,15 @@ workflow Optimus {
 
     # environment-specific parameters
     String fastq_suffix = ""
+    
+    # Emptydrops lower cutoff
+    Int emptydrops_lower = 100
+    
+    # Set to true to override input checks and allow pipeline to proceed with invalid input
+    Boolean force_no_check = false
 
     # If true produce the optional loom output
     Boolean output_loom = false
-
-    # Set to true to override input checks and allow pipeline to proceed with invalid input
-    Boolean force_no_check = false
 
     # this pipeline does not set any preemptible varibles and only relies on the task-level preemptible settings
     # you could override the tasklevel preemptible settings by passing it as one of the workflows inputs
@@ -244,7 +248,8 @@ workflow Optimus {
     input:
       sparse_count_matrix = MergeCountFiles.sparse_count_matrix,
       row_index = MergeCountFiles.row_index,
-      col_index = MergeCountFiles.col_index
+      col_index = MergeCountFiles.col_index,
+      emptydrops_lower = emptydrops_lower
   }
 
   call ZarrUtils.OptimusZarrConversion{
